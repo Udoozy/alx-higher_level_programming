@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 def best_score(a_dictionary):
     if a_dictionary:
         my_keys = list(a_dictionary.keys())
