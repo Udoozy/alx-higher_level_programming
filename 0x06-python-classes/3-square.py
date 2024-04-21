@@ -1,13 +1,13 @@
 #!/usr/bin/python3
-"""The Square module"""
+"""Module for square"""
 
 
 class Square:
-    """The square class"""
+    """Square class"""
     def __init__(self, size=0):
-        """A new size initialized.
+        """Initialization.
         Args:
-        size(int): The size of the square
+            size(int): Size of the both sides
         """
         if not isinstance(size, int):
             raise TypeError("size must be an integer")
@@ -15,6 +15,5 @@ class Square:
             raise ValueError("size must be >= 0")
         self.__size = size
 
-    def def area(self):
-        """The definition of area function"""
+    def area(self):
         return (self.__size * self.__size)
