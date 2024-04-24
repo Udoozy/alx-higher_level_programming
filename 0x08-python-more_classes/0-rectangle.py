@@ -1,8 +1,8 @@
 #!/usr/bin/python3
-""" Simple Rectangle"""
+""" Simple Rectangle """
 
 
 
 class Rectangle:
-    """ Rectangle class"""
+    """ Rectangle class """
     pass
