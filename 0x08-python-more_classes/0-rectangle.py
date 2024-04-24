@@ -1,8 +1,8 @@
 #!/usr/bin/python3
-"""Module for Reactangle class"""
+""" Simple Rectangle"""
 
 
 
 class Rectangle:
-    """Rectangle class"""
+    """ Rectangle class"""
     pass
