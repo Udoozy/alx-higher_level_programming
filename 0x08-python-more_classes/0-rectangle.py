@@ -2,6 +2,7 @@
 """Module for Reactangle class"""
 
 
+
 class Rectangle:
     """Rectangle class"""
     pass
