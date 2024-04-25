@@ -1,9 +1,9 @@
 #!/usr/bin/python3
-"""Full definition of recangle class"""
+""" Full definition of recangle class """
 
 
 class Rectangle:
-    """Defined class"""
+    """ Defined class """
 
     def __init__(self, width=0, height=0):
         self.width = width
@@ -34,11 +34,11 @@ class Rectangle:
         self.__height = value
 
     def area(self):
-        """Pub instance method-AREA"""
+        """ Pub instance method-AREA """
         return self.width * self.height
 
     def perimeter(self):
-        """Pub instance method - Perimeter"""
+        """ Pub instance method - Perimeter """
         if self.width = 0 or self.height = 0:
             return 0
         return 2 * self.width + 2 * self.height
