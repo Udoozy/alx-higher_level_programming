@@ -1,12 +1,12 @@
 #!/usr/bin/python3
-"""Full definition of recangle class"""
+""" Full definition of recangle class """
 
 
 class Rectangle:
-    """Defined class"""
+    """ Defined class """
 
     def __init__(self, height=0, width=0):
-        """Inistilizing height and width"""
+        """ Inistilizing height and width """
         self.height = height
         self.width = width
 
@@ -14,7 +14,7 @@ class Rectangle:
     def width(self):
         return self.__width
 
-    @width_setter
+    @width.setter
     def width(self, value):
         if type(value) is not int:
             raise TypeError("width must be an integer")
@@ -26,7 +26,7 @@ class Rectangle:
     def height(self):
         return self.__height
 
-    @height_setter
+    @height.setter
     def height(self, value):
         if type(value) is not int:
             raise TypeError("height must be an integer")
