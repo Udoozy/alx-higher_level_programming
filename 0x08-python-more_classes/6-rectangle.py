@@ -1,10 +1,10 @@
 #!/usr/bin/python3
 """Full definition of recangle class"""
-number_of_instances = 0
 
 
 class Rectangle:
     """Defined class"""
+    number_of_instances = 0
 
     def __init__(self, width=0, height=0):
         """Initializing Rectangle"""
