@@ -34,9 +34,11 @@ class Rectangle:
         self.__height = value
 
     def area(self):
+        """Pub Intance: Area"""
         return self.width * self.height
 
     def perimeter(self):
+        """Pub instance: Perimeter"""
         if self.width is 0 or self.height is 0:
             return 0
         return 2 * self.width + 2 * self.height
