@@ -39,6 +39,6 @@ class Rectangle:
 
     def perimeter(self):
         """ Pub instance method - Perimeter """
-        if self.width = 0 or self.height = 0:
+        if self.width is 0 or self.height is 0:
             return 0
         return 2 * self.width + 2 * self.height
