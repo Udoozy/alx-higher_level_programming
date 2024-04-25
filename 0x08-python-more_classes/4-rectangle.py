@@ -35,11 +35,11 @@ class Rectangle:
         self.__height = value
 
     def area(self):
-        """Pub Intance: Area"""
+        """Pub Intance: area"""
         return self.width * self.height
 
     def perimeter(self):
-        """Pub instance: Perimeter"""
+        """Pub instance: perimeter"""
         if self.width is 0 or self.height is 0:
             return 0
         return 2 * self.width + 2 * self.height
@@ -49,8 +49,8 @@ class Rectangle:
         if self.width is 0 or self.height is 0:
             return ""
 
-    return "{}{}".format(
-        ('#' * self.width + '\n') * (self.height - 1), '#' * self.width)
+        return "{}{}".format(
+            ('#' * self.width + '\n') * (self.height - 1), '#' * self.width)
 
     def __repr__(self):
         """Prints representation of rectangle"""
