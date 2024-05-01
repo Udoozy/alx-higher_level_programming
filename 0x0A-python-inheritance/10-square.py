@@ -7,12 +7,12 @@ Rectangle = __import__('9-rectangle').Rectangle
 class Square(Rectangle):
     """An inherited Class"""
 
-    def __init__(self, side):
+    def __init__(self, size):
         """initialisation"""
-        self.integer_validator("side", side)
-        self.__side = side
-        super().__init__(side, side)
+        self.integer_validator("side", size)
+        self.__size = size
+        super().__init__(size, size)
 
     def area(self):
         """Implemeting the Area"""
-        return self.__side ** 2
+        return self.__size ** 2
