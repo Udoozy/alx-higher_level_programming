@@ -1,7 +1,7 @@
 -- This script create second_table with sepcified fields
 CREATE TABLE IF NOT EXISTS second_table (
 	id INT,
-	name VARCHAR,
+	name VARCHAR(256),
 	score INT
 );
 
