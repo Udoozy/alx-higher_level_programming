@@ -13,8 +13,8 @@ if __name__ == "__main__":
             )
     cursor = db.cursor()
     search_pattern = sys.argv[4]
-    query = "SELECT id, name FROM states WHERE name LIKE %s ORDER BY id ASC"
-    cursor.execute(query, (search_pattern,))
+    cursor.execute("SELECT * FROM states WHERE name
+                   LIKE % s", (search_pattern, ))
 
     rows = cursor.fetchall()
     for row in rows:
