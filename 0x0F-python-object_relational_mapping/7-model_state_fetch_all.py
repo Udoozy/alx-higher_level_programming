@@ -13,7 +13,7 @@ if __name__ == "__main__":
         exit(1)
     str_con = 'mysql-mysqldb://{}:{}@localhost:3306/{}'
     engine = create_engine(str_con.format(args[1], args[2], args[3]))
-    Make_sess = sessionmaker(bind_engine)
+    Make_sess = sessionmaker(bind=engine)
 
     Base.metadata.create_all(engine)
     session = Make_sess()
