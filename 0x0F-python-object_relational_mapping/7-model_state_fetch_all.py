@@ -8,7 +8,7 @@ import sys
 
 if __name__ == "__main__":
     args = sys.argv
-    if len(args) != 4:
+    if len(args) < 4:
         exit(1)
     str_con = 'mysql-mysqldb://{}:{}@localhost:3306/{}'
     engine = create_engine(str_con.format(args[1], args[2], args[3]))
