@@ -1,12 +1,12 @@
 #!/usr/bin/python3
 """This module is for task 8"""
 import sys
-from mysqlalchemy import sessionmaker
+from mysqlalchemy.orm import sessionmaker
 from mysqlalchemy import (create_engine)
 from model_state import Base, State
 
 if __name__ == "__main__":
-    engine = ceate_engine('mysql_engine://{}:{}@localhost:3306/{}'
+    engine = ceate_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'
                           .format(sys.argv[1], sys.argv[2], sys.argv[3]))
     Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
