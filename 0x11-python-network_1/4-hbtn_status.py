@@ -4,9 +4,9 @@ import requests
 
 
 if __name__ == '__main__':
-    status = requests.Session()
+    w = requests.Session()
 
-    response = status.get('https://intranet.hbtn.io/status')
+    response = w.get('https://intranet.hbtn.io/status')
     body = response.text
 
     print('Body response:')
