@@ -8,10 +8,11 @@ if __name__ == '__main__':
 
     if argc == 0:
         print("0 arguments.")
-    if argc == 1:
+    elif argc == 1:
         print("1 argument:")
-    
-    print(f"{argc} arguments:")
+
+    else:
+        print(f"{argc} arguments:")
 
     i = 1
     for arg in argv:
