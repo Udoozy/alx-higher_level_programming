@@ -8,8 +8,8 @@ class Square:
         """ Initializing the variables
             Args: Arguements of the class
         """
-        self.__size = size
-        self.__position = position
+        self.size = size
+        self.position = position
 
     @property
     def size(self):
