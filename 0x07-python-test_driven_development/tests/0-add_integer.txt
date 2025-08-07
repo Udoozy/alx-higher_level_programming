@@ -1,92 +1,25 @@
-======================
-Test: 0-add_integer.py
-=====================
+This is a test file with a doctest
 
-funtion: ``add_integer(a, b=98)``.
+>>> add_integer = __import__('0-add_integer').add_integer
 
-Usage
-=====
-function add two integers. return an integer: the addition of a and b.
+>>> add_integer(3, 5)
+8
 
-----------------------------------------------------------------------
+>>> add_integer(-2, 6)
+4
 
-Importing
-=========
+>>> add_integer(6.2, 9.0)
+15
 
-importing the function from the module.
+>>> add_integer(5.7, 2)
+7
 
-::
-	>>> add_integer = __import__('0-add_integer').add_integer
+>>> add_integer("sam", 4,)
+Traceback (most recent call last):
+    ...
+TypeError: a must be an integer
 
-Positive Numbers.
-================
-
-::
-	>>> add_integer(5, 6)
-	11
-
-a=Postive, b=Negetive Number
-============================
-
-::
-	>>> add_integer(3, -3)
-	0
-
-Float NUmbers
-=============
-
-::
-	>>> add_integer(2.4, 3.2)
-	5
-
-Negative Float Numbers
-======================
-
-::
-	>>> add_integer(-3.4, -4.1)
-	-7
-
-Float + Integer
-================
-
-::
-	>>> add_integer(3.5, 6)
-	9
-
-One Parameter
-=============
-
-::
-	>>> add_integer(12)
-	110
-
-Errors
-======
-
-Receive srting data
-	>>> add_integer("hello", 34)
-	Traceback (most recent call last):
-  	File "<stdin>", line 1, in <module>
-  	File "/alx-higher_level_programming/0x07-python-test_driven_development/0-add_integer.py", line 8, in add_integer
-    	raise TypeError("a must be an integer")
-	TypeError: a must be an integer
-
-	>>> add_integer(5, "Hi")
-	Traceback (most recent call last):
-  	File "<stdin>", line 1, in <module>
-  	File "/alx-higher_level_programming/0x07-python-test_driven_development/0-add_integer.py", line 10, in add_integer
-    	raise TypeError("b must be an integer")
-	TypeError: b must be an integer
-
-Docstring
-==========
-
-module:
-    >>> module = __import__("0-add_integer").__doc__
-    >>> len(module) > 1
-    True
-
-function:
-    >>> fun = __import__("0-add_integer").add_integer.__doc__
-    >>> len(fun) > 1
-    True
+>>> add_integer(10, "Zita")
+Traceback (most recent call last):
+    ...
+TypeError: b must be an integer
