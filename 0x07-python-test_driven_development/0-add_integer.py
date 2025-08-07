@@ -1,15 +1,14 @@
 #!/usr/bin/python3
-import doctest
-"""A module for adding two integers.
-It takes two arguments.
-Those argument can be float or integer.
-It dosent support string.
+"""
+It handles floats by converting to integers.
+Function: add_integer(a, b=98)
+Returns an integer result.
 """
 
 
 def add_integer(a, b=98):
-    """User defined function that add two integers
-    a,b(int): The first Argument
+    """
+    This is a module that adds two integers.
     """
     if not isinstance(a, (int, float)):
         raise TypeError("a must be an integer")
