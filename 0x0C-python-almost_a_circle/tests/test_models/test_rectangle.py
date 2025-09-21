@@ -16,3 +16,13 @@ class TestRectangle(unittest.TestCase):
         self.assertRaises(TypeError, Rectangle, 10, "2")
         
         self.assertRaises(ValueError, Rectangle, 10, -10)
+        
+        r4 = Rectangle(3, 2)
+        self.assertEqual(r4.area(), 6)
+        
+        r5 = Rectangle(8, 7, 0, 0, 12)
+        self.assertEqual(r5.area(), 56)
+        
+        
+        
+        
