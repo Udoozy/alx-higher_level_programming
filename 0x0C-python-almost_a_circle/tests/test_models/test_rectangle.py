@@ -12,3 +12,7 @@ class TestRectangle(unittest.TestCase):
         
         r3 = Rectangle(10, 2, 0, 0, 12)
         self.assertEqual((r3.id), 12)
+        
+        self.assertRaises(TypeError, Rectangle, 10, "2")
+        
+        self.assertRaises(ValueError, Rectangle, 10, -10)
