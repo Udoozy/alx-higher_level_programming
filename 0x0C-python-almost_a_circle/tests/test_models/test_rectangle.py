@@ -33,5 +33,11 @@ class TestRectangle(unittest.TestCase):
 
         self.assertEqual(captured_output.getvalue(), "###\n###\n###\n###\n")
         
+        r7 = Rectangle(4, 6, 2, 1, 12)
+        self.assertEqual(str(r7), "[Rectangle] (12) 2/1 - 4/6")
+        
+        r7 = Rectangle(4, 6, 2, 1)
+        self.assertEqual(str(r7), "[Rectangle] (8) 2/1 - 4/6")
+        
         
         

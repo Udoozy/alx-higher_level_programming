@@ -69,3 +69,8 @@ class Rectangle(Base):
         """Display rectangle using # symbols"""
         for _ in range(self.height):
             print('#' * self.width)
+    
+    def __str__(self):
+        """Costumized printing"""
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(
+            self.id, self.x, self.y, self.width, self.height)
