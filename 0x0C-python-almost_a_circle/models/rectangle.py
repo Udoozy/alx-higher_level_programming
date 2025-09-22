@@ -72,6 +72,13 @@ class Rectangle(Base):
         for _ in range(self.height):
             print(' ' * self.x + '#' * self.width)
 
+    def update(self, *args):
+        """This takes variable number of args and assigns"""
+        arguments = ['id', 'width', 'height', 'x', 'y']
+        for i, value in enumerate(args):
+            if i < len(arguments):
+                setattr(self, arguments[i], value)
+
     def __str__(self):
         """Costumized printing"""
         return "[Rectangle] ({}) {}/{} - {}/{}".format(

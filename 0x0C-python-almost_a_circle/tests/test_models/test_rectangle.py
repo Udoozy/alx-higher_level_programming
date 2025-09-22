@@ -47,4 +47,11 @@ class TestRectangle(unittest.TestCase):
         expected_output = "\n  ####\n  ####\n  ####\n"
         self.assertEqual(captured_output.getvalue(), expected_output)
         
-        
+        r9 = Rectangle(10, 20, 1, 2, 99)
+        self.assertEqual((r9.id, r9.width, r9.height, r9.x, r9.y), (99, 10, 20, 1, 2))
+        r9.update(42, 7, 14, 3, 5)
+        self.assertEqual(r9.id, 42)
+        self.assertEqual(r9.width, 7)
+        self.assertEqual(r9.height, 14)
+        self.assertEqual(r9.x, 3)
+        self.assertEqual(r9.y, 5)
