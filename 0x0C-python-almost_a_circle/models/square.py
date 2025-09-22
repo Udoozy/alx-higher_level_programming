@@ -33,3 +33,12 @@ class Square(Rectangle):
             for key, value in kwargs.items():
                 if key in attributes:
                     setattr(self, key, value)
+
+    def to_dictionary(self):
+        """Method that format to dict"""
+        return {
+            "id": self.id,
+            "size": self.width,
+            "x": self.x,
+            "y": self.y
+        }
