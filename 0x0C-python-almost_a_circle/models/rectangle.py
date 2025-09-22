@@ -84,6 +84,16 @@ class Rectangle(Base):
                 if key in arguments:
                     setattr(self, key, value)
 
+    def to_dictionary(self):
+        """This method return dict"""
+        return {
+            "id": self.id,
+            "x": self.x,
+            "y": self.y,
+            "width": self.width,
+            "height": self.height
+            }
+
     def __str__(self):
         """Costumized printing"""
         return "[Rectangle] ({}) {}/{} - {}/{}".format(
