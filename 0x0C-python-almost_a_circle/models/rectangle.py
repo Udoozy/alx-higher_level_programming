@@ -72,12 +72,17 @@ class Rectangle(Base):
         for _ in range(self.height):
             print(' ' * self.x + '#' * self.width)
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """This takes variable number of args and assigns"""
         arguments = ['id', 'width', 'height', 'x', 'y']
-        for i, value in enumerate(args):
-            if i < len(arguments):
-                setattr(self, arguments[i], value)
+        if args and len(args) > 0:
+            for i, value in enumerate(args):
+                if i < len(arguments):
+                    setattr(self, arguments[i], value)
+        else:
+            for key, value in kwargs.items():
+                if key in arguments:
+                    setattr(self, key, value)
 
     def __str__(self):
         """Costumized printing"""
