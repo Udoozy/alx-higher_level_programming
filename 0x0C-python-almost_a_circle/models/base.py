@@ -23,7 +23,7 @@ class Base:
         else:
             json_format = json.dumps(list_dictionaries)
             return json_format
-    
+
     @classmethod
     def save_to_file(cls, list_objs):
         """Method that save_Json to a file"""
