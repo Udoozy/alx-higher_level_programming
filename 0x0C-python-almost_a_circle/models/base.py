@@ -30,7 +30,8 @@ class Base:
         Filename = "{}.json".format(cls.__name__)
         if list_objs is None:
             lists_dict = []
-        lists_dict = [obj.to_dictionary() for obj in list_objs]
+        else:
+            lists_dict = [obj.to_dictionary() for obj in list_objs]
 
         json_file = cls.to_json_string(lists_dict)
 
