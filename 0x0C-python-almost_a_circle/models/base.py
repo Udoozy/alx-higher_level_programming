@@ -9,6 +9,7 @@ class Base:
     __nb_objects = 0
 
     def __init__(self, id=None):
+        """The Base class blueprint"""
         if id is None:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
@@ -58,3 +59,12 @@ class Base:
         if dummy:
             dummy.update(**dictionary)
         return dummy
+
+    @classmethod
+    def load_from_file(cls):
+        """The classmethod that loads from a file"""
+        Filemame = "{}.json".format(cls.__name__)
+        with open(Filemame, 'r') as f:
+            json_file = f.read()
+            list_dicts = cls.from_json_string(json_file)
+            return [cls.create(**d) for d in list_dicts]
