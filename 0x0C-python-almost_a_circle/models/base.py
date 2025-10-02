@@ -70,3 +70,30 @@ class Base:
                 return [cls.create(**d) for d in list_dicts]
         except FileNotFoundError:
             return []
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """A class method that save file in CSV"""
+        Filename = "{}.csv".format(cls.__name__)
+        if list_objs == []:
+            return []
+        else:
+            lists_dict = [obj.to_dictionary() for obj in list_objs]
+            
+            json_list = cls.to_json_string(lists_dict)
+
+            with open(Filename, 'w') as f:
+                f.write(json_list)
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """A class method that loads from csv"""
+        Filename = "{}.csv".format(cls.__name__)
+        try:
+            with open(Filename, 'r') as f:
+                json_file = f.read()
+                
+                lists_dict = cls.from_json_string(json_file)
+                return [cls.create(**d) for d in lists_dict]
+        except FileNotFoundError:
+            return []
