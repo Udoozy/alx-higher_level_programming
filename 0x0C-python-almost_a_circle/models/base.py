@@ -79,7 +79,7 @@ class Base:
             return []
         else:
             lists_dict = [obj.to_dictionary() for obj in list_objs]
-            
+
             json_list = cls.to_json_string(lists_dict)
 
             with open(Filename, 'w') as f:
@@ -92,7 +92,7 @@ class Base:
         try:
             with open(Filename, 'r') as f:
                 json_file = f.read()
-                
+
                 lists_dict = cls.from_json_string(json_file)
                 return [cls.create(**d) for d in lists_dict]
         except FileNotFoundError:
